@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+    <TextView
+        android:id="@+id/text_title_workout"
+        android:layout_width="165dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="80dp"
+        android:fontFamily="@font/rosario_bold"
+        android:text="@string/workout"
+        android:textAlignment="center"
+        android:textColor="#D9D9D9"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/weight_icon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="5dp"
+        android:rotation="100"
+        android:src="@drawable/baseline_fitness_center_24"
+        app:layout_constraintBottom_toBottomOf="@id/text_title_workout"
+        app:layout_constraintStart_toEndOf="@id/text_title_workout" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="5dp"
+        android:src="@drawable/baseline_directions_run_24"
+
+        app:layout_constraintBottom_toBottomOf="@id/text_title_workout"
+        app:layout_constraintStart_toEndOf="@id/weight_icon" />
+
+    <TextView
+        android:id="@+id/text_title_scheduler"
+        android:layout_width="183dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="-10dp"
+        android:layout_marginEnd="84dp"
+        android:fontFamily="@font/rosario_bold"
+        android:text="@string/scheduler"
+        android:textAlignment="center"
+        android:textColor="#D9D9D9"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_title_workout" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/baseline_calendar_month_24"
+        app:layout_constraintBottom_toBottomOf="@id/text_title_scheduler"
+        app:layout_constraintEnd_toStartOf="@id/text_title_scheduler"
+        app:layout_constraintTop_toTopOf="@id/text_title_scheduler" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_new_workout"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:background="@drawable/perut"
+        android:clickable="true"
+        android:fontFamily="@font/rosario_bold"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_upcoming"
+        app:layout_constraintVertical_bias="0.055" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_new_workout2"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/dada"
+        android:clickable="true"
+        android:fontFamily="@font/rosario_bold"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_new_workout" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_new_workout3"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/lengan"
+        android:clickable="true"
+        android:fontFamily="@font/rosario_bold"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_new_workout2" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_new_workout4"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/kaki"
+        android:clickable="true"
+        android:fontFamily="@font/rosario_bold"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_new_workout3" />
+
+
+    <TextView
+        android:id="@+id/text_upcoming"
+        android:layout_width="159dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="208dp"
+        android:fontFamily="@font/rosario"
+        android:text="@string/upcoming_workouts"
+        android:textAlignment="center"
+        android:textColor="#2E3545"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.071"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="350dp"
+        android:layout_height="112dp"
+        android:layout_marginTop="28dp"
+        android:src="@drawable/summary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_title_scheduler" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="350dp"
+        android:layout_height="99dp"
+        android:layout_marginTop="28dp"
+        android:src="@drawable/target_weekly"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--<androidx.appcompat.widget.AppCompatButton-->
+<!--android:id="@+id/frame_upcoming"-->
+<!--android:layout_width="330dp"-->
+<!--android:layout_height="40dp"-->
+<!--android:layout_marginTop="9dp"-->
+<!--android:background="@drawable/blue_button"-->
+<!--app:layout_constraintEnd_toEndOf="parent"-->
+<!--app:layout_constraintStart_toStartOf="parent"-->
+<!--app:layout_constraintTop_toBottomOf="@+id/text_upcoming" />-->
+
+<!--<androidx.appcompat.widget.AppCompatButton-->
+<!--android:id="@+id/upcoming_example1"-->
+<!--android:layout_width="330dp"-->
+<!--android:layout_height="40dp"-->
+<!--android:layout_marginTop="15dp"-->
+<!--android:background="@drawable/gray_button"-->
+<!--app:layout_constraintEnd_toEndOf="parent"-->
+<!--app:layout_constraintHorizontal_bias="0.495"-->
+<!--app:layout_constraintStart_toStartOf="parent"-->
+<!--app:layout_constraintTop_toBottomOf="@id/frame_upcoming" />-->
+
+<!--<androidx.appcompat.widget.AppCompatButton-->
+<!--android:id="@+id/upcoming_example2"-->
+<!--android:layout_width="330dp"-->
+<!--android:layout_height="40dp"-->
+<!--android:layout_marginTop="15dp"-->
+<!--android:background="@drawable/gray_button"-->
+<!--app:layout_constraintEnd_toEndOf="parent"-->
+<!--app:layout_constraintHorizontal_bias="0.495"-->
+<!--app:layout_constraintStart_toStartOf="parent"-->
+<!--app:layout_constraintTop_toBottomOf="@id/upcoming_example1" />-->

@@ -1,0 +1,29 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Wiraga Waskita</string>
+    <string name="workout_scheduler">Penjadwalan Workout</string>
+    <string name="title_home">Home</string>
+    <string name="title_calendar">Kalender</string>
+    <string name="title_splash">Splash</string>
+    <string name="title_workouts">Workouts</string>
+    <string name="save">Save</string>
+    <string name="workouts">Workouts</string>
+    <string name="workout_title">Nama Workout</string>
+    <string name="placeholderTime">Month/Day/Year 00:00?m</string>
+    <string name="category">Kategori</string>
+    <string name="descriptionExample" tools:ignore="Typos">Deskripsi deskripsi deskripsi deskripsi deskripsi deskripsi deskripsi deskripsi deskripsi deskripsi</string>
+    <string name="title">Nama</string>
+    <string name="descriptionHint">Deskripsi …</string>
+    <string name="all_workouts">Daftar Workouts</string>
+    <string name="due_date">Pilih Tanggal</string>
+    <string name="completed">Selesai</string>
+    <string name="sets">Sets …</string>
+    <string name="delete">Delete</string>
+    <string name="new_workout">+ Workout Baru</string>
+    <string name="category_hint">Kategori …</string>
+    <string name="upcoming_workouts">Kategori Workouts</string>
+    <string name="workout">Wiraga</string>
+    <string name="scheduler">Waskita</string>
+    <string name="finish_workout">Finish Workout</string>
+    <string name="weight">Berat …</string>
+    <string name="time">Waktu …</string>
+</resources>

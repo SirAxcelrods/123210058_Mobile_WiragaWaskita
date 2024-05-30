@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_splash">
+
+    <fragment
+        android:id="@+id/navigation_splash"
+        android:name="com.android.wiragawaskita.SplashFragment"
+        android:label="@string/title_splash"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_navigation_splash_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.android.wiragawaskita.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_addworkout"
+            app:destination="@id/navigation_addworkout" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_calendar"
+            app:destination="@id/navigation_calendar" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_workouts"
+            app:destination="@id/navigation_workouts" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_activeworkout"
+            app:destination="@id/navigation_activeworkout" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_addworkout2"
+            app:destination="@id/navigation_addworkout" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_calendar"
+        android:name="com.android.wiragawaskita.ui.calendar.CalendarFragment"
+        android:label="@string/title_calendar"
+        tools:layout="@layout/fragment_calendar" >
+        <action
+            android:id="@+id/action_navigation_calendar_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_navigation_calendar_to_navigation_workouts"
+            app:destination="@id/navigation_workouts" />
+        <action
+            android:id="@+id/action_navigation_calendar_to_navigation_activeworkout"
+            app:destination="@id/navigation_activeworkout" />
+        <action
+            android:id="@+id/action_navigation_calendar_to_navigation_addworkout"
+            app:destination="@id/navigation_addworkout" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_workouts"
+        android:name="com.android.wiragawaskita.ui.workouts.WorkoutsFragment"
+        android:label="@string/title_workouts"
+        tools:layout="@layout/fragment_workouts" >
+        <action
+            android:id="@+id/action_navigation_workouts_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_navigation_workouts_to_navigation_activeworkout"
+            app:destination="@id/navigation_activeworkout" />
+        <action
+            android:id="@+id/action_navigation_workouts_to_navigation_addworkout"
+            app:destination="@id/navigation_addworkout" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_activeworkout"
+        android:name="com.android.wiragawaskita.ui.activeworkout.ActiveWorkoutFragment"
+        android:label="Active Workout"
+        tools:layout="@layout/fragment_activeworkout">
+        <action
+            android:id="@+id/action_navigation_activeworkout_to_navigation_workouts"
+            app:destination="@id/navigation_workouts" />
+        <action
+            android:id="@+id/action_navigation_activeworkout_to_navigation_addworkout"
+            app:destination="@id/navigation_addworkout" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_addworkout"
+        android:name="com.android.wiragawaskita.ui.addworkout.AddWorkoutFragment"
+        android:label="AddWorkout"
+        tools:layout="@layout/fragment_addworkout">
+        <action
+            android:id="@+id/action_navigation_addworkout_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_navigation_addworkout_to_navigation_workouts"
+            app:destination="@id/navigation_workouts" />
+        <action
+            android:id="@+id/action_navigation_addworkout_to_navigation_activeworkout"
+            app:destination="@id/navigation_activeworkout" />
+    </fragment>
+</navigation>

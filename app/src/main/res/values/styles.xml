@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme -->
+    <style name="AppTheme" parent="Theme.AppCompat">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#212529</item>
+        <item name="colorPrimaryVariant">#00b8ff</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">#1C9C00</item>
+        <item name="colorSecondaryVariant">#30FF00</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">#000000</item>
+
+        <!-- Customize your theme here. -->
+        <item name="floatingActionButtonStyle">@style/FloatingActionButtonStyle</item>
+    </style>
+
+    <!--  Component styles  -->
+    <style name="FloatingActionButtonStyle" parent="Widget.Design.FloatingActionButton">
+        <item name="shapeAppearanceOverlay">@style/FabShapeStyle1</item>
+    </style>
+
+    <!--  Shape styles  -->
+    <style name="FabShapeStyle1" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerSize">10%</item>
+        <item name="cornerFamily">rounded</item>
+    </style>
+
+</resources>
