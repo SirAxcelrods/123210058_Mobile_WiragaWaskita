@@ -1,23 +1,29 @@
 package com.android.wiragawaskita
 
+import android.Manifest
+import android.content.pm.PackageManager
+import android.os.Build
 import android.os.Bundle
+import android.view.View
 import androidx.activity.result.contract.ActivityResultContracts
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import androidx.room.Room
 import com.android.wiragawaskita.databinding.ActivityMainBinding
-import android.Manifest
-import android.content.pm.PackageManager
-import android.os.Build
-import android.util.Log
+import com.android.wiragawaskita.model.AppDatabase
+import com.android.wiragawaskita.model.User
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import kotlin.concurrent.thread
 
 class MainActivity : AppCompatActivity() {
 
+    private var isLoginOrRegisterProcess = false
     private lateinit var binding: ActivityMainBinding
+    private lateinit var db: AppDatabase
 
     private var notificationPermissionGranted = false
     val requestPermissionLauncher =
@@ -64,9 +70,38 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val navView: BottomNavigationView = binding.navView
+        db = Room.databaseBuilder(
+            applicationContext,
+            AppDatabase::class.java, "app-database"
+        ).build()
 
+        // Contoh penggunaan database untuk insert user di thread terpisah
+        thread {
+            val user = User(email = "example@example.com", password = "password")
+            db.userDao().insertUser(user)
+
+            // Contoh penggunaan database untuk mendapatkan user berdasarkan email dan password
+            val userLoggedIn = db.userDao().getUserByEmailAndPassword("example@example.com", "password")
+            runOnUiThread {
+                if (userLoggedIn != null) {
+                    // Pengguna berhasil login
+                } else {
+                    // Kombinasi email dan password tidak cocok
+                }
+            }
+        }
+
+        val navView: BottomNavigationView = binding.navView
         val navController = findNavController(R.id.nav_host_fragment_activity_main)
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            if(destination.id == R.id.navigation_home) {
+                supportActionBar?.show() // menampilkan action bar
+                navView.visibility = View.VISIBLE // menampilkan bottom navigation
+            } else {
+                supportActionBar?.hide() // menyembunyikan action bar
+                navView.visibility = View.GONE // menyembunyikan bottom navigation
+            }
+        }
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         val appBarConfiguration = AppBarConfiguration(

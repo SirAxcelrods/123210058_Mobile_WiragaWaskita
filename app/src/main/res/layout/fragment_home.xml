@@ -145,7 +145,7 @@
         android:fontFamily="@font/rosario"
         android:text="@string/upcoming_workouts"
         android:textAlignment="center"
-        android:textColor="#2E3545"
+        android:textColor="#D9D9D9"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"

@@ -8,12 +8,34 @@
     <fragment
         android:id="@+id/navigation_splash"
         android:name="com.android.wiragawaskita.SplashFragment"
-        android:label="@string/title_splash"
         tools:layout="@layout/fragment_splash">
         <action
-            android:id="@+id/action_navigation_splash_to_navigation_home"
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/navigation_login" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_login"
+        android:name="com.android.wiragawaskita.LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/navigation_register" />
+        <action
+            android:id="@+id/action_navigation_login_to_navigation_home"
             app:destination="@id/navigation_home" />
     </fragment>
+
+    <fragment
+        android:id="@+id/navigation_register"
+        android:name="com.android.wiragawaskita.RegisterFragment"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/navigation_login" />
+    </fragment>
+
+
 
     <fragment
         android:id="@+id/navigation_home"
