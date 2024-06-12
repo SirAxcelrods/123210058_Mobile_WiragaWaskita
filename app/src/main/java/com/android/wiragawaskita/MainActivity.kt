@@ -97,7 +97,15 @@ class MainActivity : AppCompatActivity() {
             if(destination.id == R.id.navigation_home) {
                 supportActionBar?.show() // menampilkan action bar
                 navView.visibility = View.VISIBLE // menampilkan bottom navigation
-            } else {
+            } else if(destination.id == R.id.navigation_calendar) {
+            supportActionBar?.show() // menampilkan action bar
+            navView.visibility = View.VISIBLE // menampilkan bottom navigation
+             } else if(destination.id == R.id.navigation_workouts) {
+            supportActionBar?.show() // menampilkan action bar
+            navView.visibility = View.VISIBLE // menampilkan bottom navigation
+        }
+
+            else {
                 supportActionBar?.hide() // menyembunyikan action bar
                 navView.visibility = View.GONE // menyembunyikan bottom navigation
             }
